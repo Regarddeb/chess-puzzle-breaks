@@ -3,3 +3,9 @@ dist
 node_modules
 .vscode-test/
 *.vsix
+
+# Lichess puzzle dataset and built DB — regenerated locally / published to GitHub Releases, not source controlled
+*.csv
+*.csv.zst
+*.sqlite
+*.sqlite.gz

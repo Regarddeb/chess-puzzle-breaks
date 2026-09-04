@@ -1,15 +1,20 @@
-import * as assert from 'assert';
+import * as assert from "assert";
+import * as vscode from "vscode";
 
-// You can import and use all API from the 'vscode' module
-// as well as import your extension to test it
-import * as vscode from 'vscode';
-// import * as myExtension from '../../extension';
+// Activation itself must stay network-free (see extension.ts) — it only
+// registers the command, deferring the puzzle DB download to when the
+// command actually runs. That's what makes this safe to assert here.
+suite("Extension activation", () => {
+  test("activates and registers the show-puzzle command", async () => {
+    const extension = vscode.extensions.getExtension("Regarddeb.chess-puzzle-breaks");
+    assert.ok(extension, "extension should be discoverable by the test host");
 
-suite('Extension Test Suite', () => {
-	vscode.window.showInformationMessage('Start all tests.');
+    await extension!.activate();
 
-	test('Sample test', () => {
-		assert.strictEqual(-1, [1, 2, 3].indexOf(5));
-		assert.strictEqual(-1, [1, 2, 3].indexOf(0));
-	});
+    const commands = await vscode.commands.getCommands(true);
+    assert.ok(
+      commands.includes("chess-puzzle-breaks.showPuzzle"),
+      "chess-puzzle-breaks.showPuzzle should be registered after activation",
+    );
+  });
 });

@@ -2,16 +2,25 @@
   "name": "chess-puzzle-breaks",
   "displayName": "chess-puzzle-breaks",
   "description": "Solve chess puzzles during your breaks",
+  "publisher": "Regarddeb",
   "version": "0.0.1",
+  "icon": "extension-icon.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Regarddeb/chess-puzzle-breaks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Regarddeb/chess-puzzle-breaks/issues"
+  },
+  "homepage": "https://github.com/Regarddeb/chess-puzzle-breaks#readme",
   "engines": {
     "vscode": "^1.134.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onStartupFinished"
-  ],
+  "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
@@ -19,7 +28,26 @@
         "command": "chess-puzzle-breaks.showPuzzle",
         "title": "Chess Puzzle: Show a Puzzle"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Chess Puzzle Breaks",
+      "properties": {
+        "chessPuzzleBreaks.minRating": {
+          "type": "number",
+          "default": 1200,
+          "minimum": 400,
+          "maximum": 3200,
+          "description": "Minimum Lichess puzzle rating to select from."
+        },
+        "chessPuzzleBreaks.maxRating": {
+          "type": "number",
+          "default": 1600,
+          "minimum": 400,
+          "maximum": 3200,
+          "description": "Maximum Lichess puzzle rating to select from."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",
@@ -33,7 +61,8 @@
     "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
     "check-types": "tsc --noEmit",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "build-db": "node scripts/build-db.mjs"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^9.6.0",
@@ -42,6 +71,7 @@
     "@types/vscode": "^1.134.0",
     "@vscode/test-cli": "^0.0.15",
     "@vscode/test-electron": "^3.0.0",
+    "csv-parse": "^7.0.2",
     "esbuild": "^0.28.1",
     "eslint": "^10.5.0",
     "npm-run-all": "^4.1.5",
@@ -53,6 +83,7 @@
     "serialize-javascript": "^7.0.6"
   },
   "dependencies": {
-    "better-sqlite3": "^13.0.3"
+    "better-sqlite3": "^13.0.3",
+    "chess.js": "^1.4.0"
   }
 }
