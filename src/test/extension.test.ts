@@ -6,7 +6,7 @@ import * as vscode from "vscode";
 // command actually runs. That's what makes this safe to assert here.
 suite("Extension activation", () => {
   test("activates and registers the show-puzzle command", async () => {
-    const extension = vscode.extensions.getExtension("Regarddeb.chess-puzzle-breaks");
+    const extension = vscode.extensions.getExtension("HumphreyUno.chess-puzzle-breaks");
     assert.ok(extension, "extension should be discoverable by the test host");
 
     await extension!.activate();
