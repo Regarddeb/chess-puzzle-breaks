@@ -23,10 +23,10 @@ importers:
         version: 10.0.10
       '@types/node':
         specifier: 26.x
-        version: 26.5.0
+        version: 26.5.1
       '@types/vscode':
-        specifier: ^1.136.0
-        version: 1.136.0
+        specifier: ^1.137.0
+        version: 1.137.0
       '@vscode/test-cli':
         specifier: ^0.0.15
         version: 0.0.15
@@ -319,11 +319,11 @@ packages:
   '@types/mocha@10.0.10':
     resolution: {integrity: sha512-xPyYSz1cMPnJQhl0CLMH68j3gprKZaTjG3s5Vi+fDgx+uhG9NOXwbVt52eFS8ECyXhyKcjDLCBEqBExKuiZb7Q==}
 
-  '@types/node@26.5.0':
-    resolution: {integrity: sha512-dVSGpriSoCgz8WnDNTuSSuSv1PC/ALXihO4ulRZt7Md8k9mlbdin3lGOcDE8SnWOgf513ByWlXd7BK4azmyg/A==}
+  '@types/node@26.5.1':
+    resolution: {integrity: sha512-CzNm2FezW4VR/LjG6yUdiEgLE/rAQ9Slj5gCu/C2VrdcW7I0ahNZ8DRbHT7zOZ6r3ONgd/bsQIeSaoDGrd1C6g==}
 
-  '@types/vscode@1.136.0':
-    resolution: {integrity: sha512-DO746VAfnHk8+Y8CsUKYMm2rjWD0mxEuYBZI+ssaqJY7yvLJPf9lcwxSSz9W60gbdvdcGyvHQxHTyByfF9mVqg==}
+  '@types/vscode@1.137.0':
+    resolution: {integrity: sha512-0dc/BBWxkyUsJzXIZ7PkKSalThmS4xiBT+8YEDiWdCefRKHGVV5ZNkM5NB5ULYamallYJujIfncNoXWFlyzL8A==}
 
   '@typescript-eslint/eslint-plugin@8.70.0':
     resolution: {integrity: sha512-/v8HZt6RlyIZxB3ntehELOcUcfxKPVGWXnQdJuHRmzrqgF8nQypcC/oxGW+Ot4VGKDq81XugPKxx0n5PBtf9PA==}
@@ -1805,7 +1805,7 @@ snapshots:
 
   '@types/better-sqlite3@9.6.0':
     dependencies:
-      '@types/node': 26.5.0
+      '@types/node': 26.5.1
 
   '@types/esrecurse@4.3.1': {}
 
@@ -1817,11 +1817,11 @@ snapshots:
 
   '@types/mocha@10.0.10': {}
 
-  '@types/node@26.5.0':
+  '@types/node@26.5.1':
     dependencies:
       undici-types: 8.9.0
 
-  '@types/vscode@1.136.0': {}
+  '@types/vscode@1.137.0': {}
 
   '@typescript-eslint/eslint-plugin@8.70.0(@typescript-eslint/parser@8.70.0(eslint@10.10.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.10.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)':
     dependencies:
