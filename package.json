@@ -62,7 +62,8 @@
     "check-types": "tsc --noEmit",
     "lint": "eslint src",
     "test": "vscode-test",
-    "build-db": "node scripts/build-db.mjs"
+    "build-db": "node scripts/build-db.mjs",
+    "release-notes": "node scripts/release-notes.mjs"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^9.6.0",
