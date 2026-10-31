@@ -15,6 +15,10 @@ Solve chess puzzles from the [Lichess puzzle dataset](https://database.lichess.o
 
 None beyond VS Code itself. An internet connection is required the first time the extension activates, to download the puzzle database.
 
+## Uninstalling
+
+The downloaded puzzle database is removed automatically the next time VS Code restarts after you uninstall the extension. That cleanup only covers standard VS Code and VS Code Insiders installs. For portable installs, VSCodium and other variants, delete the files yourself from the `globalStorage/humphreyuno.chess-puzzle-breaks` folder in your user data directory. On Windows, for example, that's `%APPDATA%\Code\User\globalStorage\humphreyuno.chess-puzzle-breaks`.
+
 ## Extension Settings
 
 This extension contributes the following settings:
