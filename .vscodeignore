@@ -1,5 +1,9 @@
 .vscode/**
 .vscode-test/**
+.claude/**
+.github/**
+scripts/**
+CLAUDE.md
 out/**
 node_modules/**
 src/**
