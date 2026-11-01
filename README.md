@@ -1,4 +1,4 @@
-# chess-puzzle-breaks
+# Chess Puzzle Breaks
 
 Solve chess puzzles from the [Lichess puzzle dataset](https://database.lichess.org/#puzzles) without leaving VS Code — pull up a tactic during a build, a compile, or a coffee break.
 

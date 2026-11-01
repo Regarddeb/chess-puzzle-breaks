@@ -5,6 +5,9 @@ updates:
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 10
+    ignore:
+      # Must not be newer than engines.vscode, or vsce refuses to package.
+      - dependency-name: "@types/vscode"
     groups:
       dependencies:
         patterns:
